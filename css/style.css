@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+}
+
+html {
+    font-size: 24px;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #FFFF;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-template-columns: auto minmax(300px,800px) 200px auto;
+    grid-template-rows: min-content 90px auto 60px;
+    grid-template-areas: 
+    "header header  nav     nav"
+    "aside   main    main    main"
+    "aside   main    main    main"
+    "footer footer  footer  footer";
+}
+
+nav {
+    font-size: 18px;
+    grid-area: nav;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    padding-bottom: 20px;
+}
+
+nav a:link, nav a:visited {
+    background-color: #121013;
+    color: white;
+}
+
+nav a:hover, nav a:active {
+    background-color: #8eb4c5;
+    color: #c0b7b7;
+}
+
+header {
+    grid-area: header;
+    height: 60px;
+    background-color: #F2EFE9;
+    color:#121013;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#boxmodell {
+color: black;
+}
+
+header h1 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h3 {
+    color: #252627;
+    margin-top: 10px;
+}
+
+main {
+    grid-area: main;
+    background-color: #d0deec;
+    padding: 10px;
+    max-width: 100%;
+}
+
+#del2, #contentborder {
+    clear: both;
+}
+
+img {
+    max-width: 100%;
+}
+
+#box {
+    float: left;
+    max-width: 50vh;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+#design {
+    float: right;
+    max-width: 30vh;
+    margin: 20px;
+    margin-top: 40px;
+}
+
+.imggrid {
+    max-width: 1000px;
+    display: block;
+}
+
+.aroundbox {
+    position: relative;
+    display: inline-block;
+    margin: 2px;
+}
+
+.aroundbox div {
+    
+    position: absolute;
+    border: 3px solid black;
+    margin: 0;
+    padding: 5px;
+    max-width: 400px;
+}
+
+#exempel {
+    visibility: hidden;
+    background-color: #47426d;
+    color: white;
+}
+
+#showbox ~ div {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 1s;
+}
+
+#showbox:checked ~ div{
+    visibility: visible;
+    transform: scaleY(1);
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: #424444;
+    color: white;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    h4 {
+        clear: both;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .floatimg, #box {
+        float: none;
+    }    
+    .imggrid {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    body {
+        display: block;
+    }
+
+    header {
+        justify-content: left;
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    #design {
+        float: none;
+        max-width: 100%;
+    }
+}
