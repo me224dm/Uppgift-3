@@ -20,15 +20,15 @@ body {
     grid-template-columns: auto minmax(300px,800px) 200px auto;
     grid-template-rows: min-content 90px auto 60px;
     grid-template-areas: 
-    "header header  nav     nav"
+    "header header  header  header"
     "aside   main    main    main"
     "aside   main    main    main"
     "footer footer  footer  footer";
 }
 
 nav {
-    font-size: 18px;
     grid-area: nav;
+    font-size: 18px;
 }
 
 nav ul {
@@ -39,7 +39,8 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    display: block;
+    display: flex;
+    flex-direction: row;
     padding-bottom: 20px;
 }
 
@@ -55,21 +56,20 @@ nav a:hover, nav a:active {
 
 header {
     grid-area: header;
-    height: 60px;
+    width: 100%;
     background-color: #F2EFE9;
     color:#121013;
     position: sticky;
     top: 0;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
 }
 
-#boxmodell {
-color: black;
-}
 
 header h1 {
-    max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -85,64 +85,15 @@ main {
     max-width: 100%;
 }
 
-#del2, #contentborder {
-    clear: both;
+aside {
+    min-width: 200px;
 }
+
 
 img {
     max-width: 100%;
 }
 
-#box {
-    float: left;
-    max-width: 50vh;
-    margin-top: 10px;
-    margin-right: 20px;
-}
-
-#design {
-    float: right;
-    max-width: 30vh;
-    margin: 20px;
-    margin-top: 40px;
-}
-
-.imggrid {
-    max-width: 1000px;
-    display: block;
-}
-
-.aroundbox {
-    position: relative;
-    display: inline-block;
-    margin: 2px;
-}
-
-.aroundbox div {
-    
-    position: absolute;
-    border: 3px solid black;
-    margin: 0;
-    padding: 5px;
-    max-width: 400px;
-}
-
-#exempel {
-    visibility: hidden;
-    background-color: #47426d;
-    color: white;
-}
-
-#showbox ~ div {
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 1s;
-}
-
-#showbox:checked ~ div{
-    visibility: visible;
-    transform: scaleY(1);
-}
 
 footer {
     grid-area: footer;
@@ -152,6 +103,8 @@ footer {
     padding: 20px;
 }
 
+
+/*
 @media screen and (max-width: 1000px) {
     h4 {
         clear: both;
