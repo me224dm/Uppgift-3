@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobba hos oss</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Om Oss</a></li>
+            <li><a href="kafe.html">Kafé</a></li>
+            <li><a href="meny.html">Meny</a></li>
+            <li><a href="form.html">Kontakta oss</a></li>
+            <li><a href="rapport">rapport</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Kampus Kaffe</h1>
+    </header>
+<body>
+    <main>
+        <h2>Kontakta Kampus Kaffe</h2>
+        <p>Vi vill ständigt bli bättre och bryr oss om våra kunder. Är det någonting ni vill se förändring på, ansöka om jobb eller saknar i butik så som hemsida är det bara att kontakta oss! </p>
+        <form id="form">
+    <fieldset id="information">
+        <legend>Kontaktuppgifter</legend>
+        <div>
+            <label for="name"> Namn: * </label>
+            <input type="text" id="name" name="name" required>
+            <label for="street"> Gatuadress: </label>
+            <input type="text" id="street" name="street">
+            <label for="zipcode"> Postnummer: </label>
+            <input type="text" id="zipcode" name="zipcode">
+            <label for="city"> Ort: </label>
+            <input type="text" id="city" name="city">            <label for="email"> E-post: </label>
+            <input type="text" id="email" name="email">
+            <label for="number"> Telefonnummer: </label>
+            <input type="text" id="number" name="number">
+        </div>
+    </fieldset>
+    <fieldset id="choice">
+        <legend> Hur vill du att vi tar kontakt med dig?</legend>
+        <div>
+            <label>
+                <input type="radio" name="contact" value="email"> E-post
+            </label>
+            <label>
+                <input type="radio" name="contact" value="phone"> Telefon
+            </label>
+        </div>
+    </fieldset>
+    <fieldset id="costumerText">
+			<legend> Meddelande:* </legend>
+                <label for="message"></label>
+                <textarea id="message" name="message" cols="60" rows="10" required></textarea>
+    </fieldset>
+    <fieldset>
+        <div id="send">
+            <input type="submit" value="Skicka meddelande">
+        </div>
+    </fieldset>
+        </form>
+    </main>
+</body>
+</html>
