@@ -10,7 +10,6 @@ html {
 
 html, body {
     height: 100%;
-    width: 100%;
 }
 
 body {
@@ -22,14 +21,14 @@ body {
     grid-template-rows: min-content 90px auto 120px;
     grid-template-areas: 
     "header header  header  header"
-    "nav   main    main    main"
-    "nav   main    main    main"
+    "nav    main    main    main"
+    "nav    main    main    main"
     "footer footer  footer  footer";
 }
 
 nav {
     grid-area: nav;
-    min-width: 250px;
+    width: 300px;
     background-color: #8eb4c5;
 }
 
@@ -100,13 +99,61 @@ h3 {
 
 main {
     grid-area: main;
-    background-color: #d0deec;
+    background-color: #eee8e8;
     padding: 10px;
-    max-width: 100%;
 }
 
 img {
     max-width: 100%;
+}
+
+#workers {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.names ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 150px;
+    padding: 10px;
+    gap: 20px;
+}
+
+iframe {
+    border: none;
+    height: 250px;
+}
+
+#listapåöppetider {
+    text-align: center;
+    border: 2px solid black;
+    width: 500px;
+    padding: 5px;
+    margin: auto;
+}
+
+#listapåöppetider ul {
+    list-style: none;
+}
+
+#indexheader {
+    padding: 10px;
+    color: cadetblue;
+}
+
+#welcome {
+    float: left;
+    padding: 0 20px;
+}
+
+#text1 {
+    text-align: top;
+}
+
+#text {
+    clear: both;
 }
 
 footer {
@@ -151,25 +198,27 @@ footer div {
 }
 /* slut på meny*/
 
-#sortiment img {
-    display: block;
+#sortiment {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 20px;
+    justify-content: space-evenly;
+    vertical-align: top;
 }
 
-/*
-#sortiment #mexico img {
-    float: left;
-}
+figure {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 15px;
+    flex-basis: 400px;
+    flex-shrink: 0;
+    flex-grow: 1;
+} 
 
-#sortiment #jamaica img {
-    float: left;
-}
-
-#sortiment #hawaii img {
-    float: left;
-}
-
-#sortiment #guatemala img {
-    float: left;
+figure img {
+    max-width: 25vw;
 }
 
 /* stil för formuläret */
