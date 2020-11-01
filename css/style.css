@@ -28,7 +28,7 @@ body {
 
 nav {
     grid-area: nav;
-    background-color: #8eb4c5;
+    background-color: #867c65;
     width: 100%;
 }
 
@@ -50,20 +50,20 @@ nav a {
 }
 
 nav a:link, nav a:visited {
-    background-color: #8eb4c5;
+    background-color: #867c65;
     color: white;
 }
 
 nav a:hover, nav a:active {
-    background-color: #8eb4c5;
-    color: #c0b7b7;
+    background-color: #a09a8c;
+    color: #68645a;
 }
 
 header {
     grid-area: header;
     height: 7rem;
     padding-left: 20px;
-    background-color: #F2EFE9;
+    background-color: #ffffff;
     color:#121013;
     position: sticky;
     top: 0;
@@ -92,13 +92,13 @@ header h1 {
 }
 
 h3 {
-    color: #252627;
+    color: #39393a;
     margin-top: 10px;
 }
 
 main {
     grid-area: main;
-    background-color: #eee8e8;
+    background-color: #a3b9a0;
     padding: 20px;
 }
 
@@ -145,7 +145,7 @@ iframe {
 
 #indexheader {
     padding: 10px;
-    color: cadetblue;
+    color: #304930;
 }
 
 #welcome {
@@ -187,10 +187,10 @@ picture img {
 footer {
     grid-area: footer;
     text-align: center;
-    background-color: #424444;
+    background-color: #273529;
     color: white;
     padding: 20px;
-    min-height: 250px;
+    min-height: 200px;
 }
 
 footer div {
